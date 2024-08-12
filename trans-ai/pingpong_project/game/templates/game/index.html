@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Ping Pong</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Ping Pong</h1>
+        <nav>
+            <a href="{% url 'play' %}" class="button">Play Game</a>
+            <a href="{% url 'tournament' %}" class="button">Tournament</a>
+        </nav>
+    </div>
+</body>
+</html>

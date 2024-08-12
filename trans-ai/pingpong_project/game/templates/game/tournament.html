@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Pong Tournament</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Ping Pong Tournament</h1>
+        <div id="playerForm">
+            <input type="text" id="playerName" placeholder="Enter player name">
+            <button onclick="addPlayer()">Add Player</button>
+        </div>
+        <button id="startTournamentBtn" onclick="startTournament()">Start Tournament</button>
+        <button id="resetTournamentBtn" onclick="resetTournament()">Reset Tournament</button>
+        <div id="tournamentInfo"></div>
+        <div id="currentMatch"></div>
+        <div id="matchOrder"></div>
+        <div id="results"></div>
+        <div id="gameArea" style="display: none;">
+            <canvas id="gameCanvas" width="800" height="400"></canvas>
+            <div id="scoreBoard">
+                <span id="player1Name"></span>: <span id="player1Score">0</span> - 
+                <span id="player2Name"></span>: <span id="player2Score">0</span>
+            </div>
+            <button id="startGameBtn">Start Game</button>
+            <button id="endGameBtn" style="display: none;">End Game</button>
+        </div>
+        <a href="{% url 'index' %}" class="button">Back to Home</a>
+    </div>
+    <script src="{% static 'js/tournament.js' %}"></script>
+    <script src="{% static 'js/game.js' %}"></script>
+</body>
+</html>

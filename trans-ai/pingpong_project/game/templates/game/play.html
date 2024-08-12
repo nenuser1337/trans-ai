@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Ping Pong</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Ping Pong Game</h1>
+        <div id="tournamentInfo"></div>
+        <div id="currentMatch"></div>
+        <canvas id="gameCanvas" width="800" height="400"></canvas>
+        <div id="scoreBoard">
+            <span id="player1Score">0</span> - <span id="player2Score">0</span>
+        </div>
+        <button id="startGameBtn">Start Game</button>
+        <button id="endGameBtn" style="display: none;">End Game</button>
+        <a href="{% url 'index' %}" class="button">Back to Home</a>
+    </div>
+    <script src="{% static 'js/game.js' %}"></script>
+</body>
+</html>
